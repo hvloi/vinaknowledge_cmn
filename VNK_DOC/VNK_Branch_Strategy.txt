@@ -1,0 +1,70 @@
+/******************************************************************************\
+********************************************************************************
+**                                                                            **
+**                  [ V N K - V I N A  K N O W L E D G E ]                    **
+**                                                                            **
+**                   SITE  : https://www.vinaknowledge.com                    **
+**                   EMAIL : hvloi@vinaknowledge.com                          **
+**                                                                            **
+**                       TAN BINH DST, HCMC, VIET NAM                         **
+**                                                                            **
+**                      Copyright © 2019 Vina Knowledge                       **
+**                                                                            **
+********************************************************************************
+\******************************************************************************/
+
+V N K  -  B R A N C H  S T R A T E G Y
+
+--------------------------------------------------------------------------------
+
+A U T H O R:
+
+Loi Huynh
+
+DESCRIPTION:
+
+This docmument define template for the branch name when creating a new branch.
+
+--------------------------------------------------------------------------------
+
+B R A N  C H  F E A T U R E :
+
+Format:
+
+<repository-code>/<module-code>/<language>/<feature-description>/<task-in-short>
+
+Desciption:
+
+<repository-code>     : is the code of repository, for example "vnkcmn" is the
+                        repository code of VNK Common repository.
+
+<module-code>         : is the code of module, for example "vnkmq" is the module
+                        code of the module VNK Message Queue.
+
+<language>            : is the used language (C/CPP/Shell) in this branch.
+
+<feature-description> : is short description about the feature.
+
+<task-in-short>       : is short description of what to be done in this branch.
+
+B R A N C H  I S S U E :
+
+Format:
+
+<repository-code>/<module-code>/<language>/<issue-description>/<task-in-short>
+
+Desciption:
+
+<repository-code>   : is the code of repository, for example "vnkcmn" is the
+                      repository code of VNK Common repository.
+
+<module-code>       : is the code of module, for example "vnkmq" is the module
+                      code of the module VNK Message Queue.
+
+<language>          : is the used language (C/CPP/Shell) in this branch.
+
+<issue-description> : is short description about the issue.
+
+<task-in-short>     : is a short description of what to be done in this branch.
+
+--------------------------------------------------------------------------------

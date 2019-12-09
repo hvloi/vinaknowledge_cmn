@@ -1,0 +1,48 @@
+/******************************************************************************\
+********************************************************************************
+**                                                                            **
+**                  [ V N K - V I N A  K N O W L E D G E ]                    **
+**                                                                            **
+**                   SITE  : https://www.vinaknowledge.com                    **
+**                   EMAIL : hvloi@vinaknowledge.com                          **
+**                                                                            **
+**                       TAN BINH DST, HCMC, VIET NAM                         **
+**                                                                            **
+**                      Copyright © 2019 Vina Knowledge                       **
+**                                                                            **
+********************************************************************************
+\******************************************************************************/
+
+V N K - C M N  P R O J E C T
+
+--------------------------------------------------------------------------------
+
+PROJECTCODE:
+
+VNKCMN - vnkcmn
+
+A U T H O R:
+
+Loi Huynh
+
+DESCRIPTION:
+
+VNK-CMN mean ViNaKnowledge ComMoN.
+
+This vinaknowledge-cmn repository contains common libraries and script that are
+used in other repository, especialy in LBT project.
+All functions or srcripts that can be reused, have to placed in this repository.
+
+BINARY NAME:
+
+--------------------------------------------------------------------------------
+
+USING:
+
+TIPS:
+
+NOTICE:
+
+OTHERS:
+
+--------------------------------------------------------------------------------

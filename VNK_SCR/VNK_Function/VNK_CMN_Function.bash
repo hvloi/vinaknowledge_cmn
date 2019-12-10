@@ -28,8 +28,7 @@
 # A D D  O U T  S I D E  S O U R C E
 ##
 
-source VNK_CMN_DEF.bash
-source VNK_CMN_FUN.bash
+source ../VNK_CMN_BOSS.bash "Y"
 
 ##------------------------------------------------------------------------------
 # D E F I N I T I O N S

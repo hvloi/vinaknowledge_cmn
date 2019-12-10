@@ -25,6 +25,23 @@
 ##
 
 ##------------------------------------------------------------------------------
+# D E S C R I P T I O N
+##
+
+##
+# AUTHOR:
+# Loi Huynh
+#
+# USING:
+# This script is used in other scripts.
+#
+# SYNTAX:
+# In other scripts call:
+# source VNK_CMN_BOSS.bash <"Y">
+# Passing "Y" (Yes) to the script to let it know it is a source script.
+##
+
+##------------------------------------------------------------------------------
 # D E F I N I T I O N S
 ##
 
@@ -40,6 +57,7 @@ CMN_EXIT_OK=0
 CMN_EXIT_KO=1
 
 # Root directory of the project #
+ROOT_OF_ROOT=$VNK_NULL
 ROOT_DIR_NAME="vinaknowledge_cmn"
 ROOT_DIR_PATH=$VNK_NULL
 
@@ -55,6 +73,20 @@ VNK_BH="/dev/null"
 # Needed tools #
 PWD=$VNK_NULL
 SED=$VNK_NULL
+
+# Who I am ? #
+IAm="$(basename $0)"
+
+# Let me know if I am a source script, if I am, I will exit by simply return #
+ExitScript="exit"
+if [ "$1" = "Y" ] || [ "$1" = "y" ]
+then
+    ExitScript="return"
+elif [ -n "$1" ]
+then
+    echo -e "[ERRO]: $IAm need to know it is source script or not! Exit luon!"
+    $ExitScript $CMN_EXIT_KO
+fi
 
 ##------------------------------------------------------------------------------
 # F U N C T I O N S
@@ -99,13 +131,16 @@ VNK_CheckAvailableTool()
 # M A I N  C O D E
 ##
 
+echo "[INFO]: Calling $IAm,..."
+echo
+
 # Check the S_COMMAND, do not want to show default error #
 $S_COMMAND 2> $VNK_BH
 Status=$?
 if [ "$Status" -ne "0" ]
 then
     echo -e "[ERRO]: \"$S_COMMAND\" is needed but not found, exit!"
-    exit $CMN_EXIT_KO
+    $ExitScript $CMN_RETURN_OK
 fi
 
 # Checking PWD #
@@ -120,8 +155,21 @@ SED="$(VNK_CheckAvailableTool sed)"
 echo -e "[INFO]: Cheking done! Using \"$SED\"!"
 echo
 
+# Set up ROOT_DIR_PATH #
+PWD_CMD="$PWD -L"
+ROOT_OF_ROOT="$($PWD_CMD | $SED -e "s/\/$ROOT_DIR_NAME\/.*$//")"
+ROOT_DIR_PATH="$ROOT_OF_ROOT/$ROOT_DIR_NAME"
+
+##
 # Exit with non-error status
-exit $CMN_EXIT_OK
+# N O T I C E:
+# Should NOT call "exit" in the case if the script is a source of other script.
+# More investigation should be done to show a clearer reason.
+##
+# exit $CMN_EXIT_OK
+
+# Return a status code instead of exit #
+$ExitScript $CMN_RETURN_OK
 
 ##
 # E N D

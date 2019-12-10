@@ -28,7 +28,6 @@
 # A D D  O U T  S I D E  S O U R C E
 ##
 
-source VNK_CMN_DEF.bash
 
 ##------------------------------------------------------------------------------
 # D E F I N I T I O N S

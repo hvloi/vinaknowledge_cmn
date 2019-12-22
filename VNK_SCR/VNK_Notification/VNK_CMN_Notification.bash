@@ -33,6 +33,9 @@
 # D E F I N I T I O N S
 ##
 
+# Import some source script #
+source $WORKSPACE/VNK_SCR/VNK_Definition/VNK_CMN_Definition.bash
+
 ##------------------------------------------------------------------------------
 # F U N C T I O N S
 ##

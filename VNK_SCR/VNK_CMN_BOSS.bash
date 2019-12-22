@@ -75,12 +75,19 @@ PWD=$VNK_NULL
 SED=$VNK_NULL
 
 # Who I am ? #
-IAm="$(basename $0)"
+IAm=$BASH_SOURCE
+
+# Definition YES vs NO #
+YES=1; NO=0
+
+# What is my role? #
+IS_SOURCE_SCR=$NO
 
 # Let me know if I am a source script, if I am, I will exit by simply return #
 ExitScript="exit"
 if [ "$1" = "Y" ] || [ "$1" = "y" ]
 then
+    IS_SOURCE_SCR=$YES
     ExitScript="return"
 elif [ -n "$1" ]
 then
@@ -131,7 +138,13 @@ VNK_CheckAvailableTool()
 # M A I N  C O D E
 ##
 
-echo "[INFO]: Calling $IAm,..."
+if [ $IS_SOURCE_SCR -eq $YES ]
+then
+    echo "[INFO]: Importing $IAm,..."
+else
+    echo "[INFO]: Calling $IAm,..."
+fi
+# Show a line #
 echo
 
 # Check the S_COMMAND, do not want to show default error #

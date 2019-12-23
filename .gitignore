@@ -33,6 +33,9 @@ GPATH
 GRTAGS
 GTAGS
 
+# Ignore Build Target #
+VNK_CMN_BuildTarget
+
 ##
 # NO IGNORED
 ##

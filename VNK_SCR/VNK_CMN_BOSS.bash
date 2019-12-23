@@ -133,6 +133,7 @@ VNK_CheckAvailableTool()
     $RETURN_STR $ToolPath
     return $CMN_RETURN_OK
 }
+export VNK_CheckAvailableTool
 
 ##------------------------------------------------------------------------------
 # M A I N  C O D E

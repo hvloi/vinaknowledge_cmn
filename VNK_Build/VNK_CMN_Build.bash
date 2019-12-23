@@ -55,6 +55,8 @@ source $WORKSPACE/VNK_SCR/VNK_Notification/VNK_CMN_Notification.bash
 
 IAm=$BASH_SOURCE
 
+VNK_BUILD_TARGET="$WORKSPACE/VNK_CMN_BuildTarget"
+
 ##------------------------------------------------------------------------------
 # F U N C T I O N S
 ##
@@ -64,6 +66,23 @@ IAm=$BASH_SOURCE
 ##
 
 VNK_Notify_INFO "Calling $IAm,..."
+
+# Validate if mkdir is available #
+VNK_Notify_INFO "Checking MKDIR,..."
+MKDIR="$(VNK_CheckAvailableTool mkdir)"
+VNK_Notify_INFO "Cheking done! Using \"$MKDIR\"!"
+# Make a blank line #
+echo
+
+# Create build directory #
+VNK_Notify_INFO "Genrerating $VNK_BUILD_TARGET"
+L_ErrStr="$($MKDIR $VNK_BUILD_TARGET 2>&1)"
+L_RetCode=$?
+if [ "$L_RetCode" != "0" ]
+then
+    VNK_Notify_ERRO "$L_ErrStr! Exit!"
+fi
+echo
 
 ##
 # E N D

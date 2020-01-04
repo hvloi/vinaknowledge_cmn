@@ -23,48 +23,68 @@ Loi Huynh
 
 DESCRIPTION:
 
-This docmument define template for the branch name when creating a new branch.
+This docmument defines a template for the branch name when creating new branchs.
 
 --------------------------------------------------------------------------------
 
-B R A N  C H  F E A T U R E :
+B R A N C H  F E A T U R E :
 
 Format:
 
-<repository-code>/<module-code>/<language>/<feature-description>/<task-in-short>
+<VNK>/<Repository-Code>/<Module-Code>/<Feature-ShortDescription>/<Task-In-Short>
 
 Desciption:
 
-<repository-code>     : is the code of repository, for example "vnkcmn" is the
-                        repository code of VNK Common repository.
+<VNK>
+V I N A  K N O W L E D G E
 
-<module-code>         : is the code of module, for example "vnkmq" is the module
-                        code of the module VNK Message Queue.
+<Repository-Code>
+Is the code of repository. For example, "vnkcmn" is the repository code of
+VNK Common repository.
 
-<language>            : is the used language (C/CPP/Shell) in this branch.
+<Module-Code>
+Is the code of module. For example, "vnkmq" is the module code of the module
+VNK Message Queue.
 
-<feature-description> : is short description about the feature.
+<Feature-ShortDescription>
+Is a short description about the feature.
 
-<task-in-short>       : is short description of what to be done in this branch.
+<Task-In-Short>
+Is a short description of what to be done in this branch.
+
+Example:
+
+"VNK/vnkcmn/vnkmq/Re_ArrangeCode/UpdateBranchStragetry"
+
+--------------------------------------------------------------------------------
 
 B R A N C H  I S S U E :
 
 Format:
 
-<repository-code>/<module-code>/<language>/<issue-description>/<task-in-short>
+<VNK>/<Repository-Code>/<Module-Code>/<Issue-ShortDescription>/<Task-In-Short>
 
 Desciption:
 
-<repository-code>   : is the code of repository, for example "vnkcmn" is the
-                      repository code of VNK Common repository.
+<VNK>
+V I N A  K N O W L E D G E
 
-<module-code>       : is the code of module, for example "vnkmq" is the module
-                      code of the module VNK Message Queue.
+<Repository-Code>
+Is the code of repository. For example, "vnkcmn" is the repository code of
+VNK Common repository.
 
-<language>          : is the used language (C/CPP/Shell) in this branch.
+<Module-Code>
+Is the code of module. For example, "vnkmq" is the module code of the module
+VNK Message Queue.
 
-<issue-description> : is short description about the issue.
+<Issue-ShortDescription>
+Is a short description about the issue.
 
-<task-in-short>     : is a short description of what to be done in this branch.
+<Task-In-Short>
+Is a short description of what to be done in this branch.
+
+Example:
+
+"VNK/vnkcmn/vnkmq/Fix_ArrangeCode/ArrangeBranchStragetry"
 
 --------------------------------------------------------------------------------
